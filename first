@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>German Exam</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .question {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      position: relative;
+    }
+    .question p {
+      margin: 5px 0;
+    }
+    .sub-question {
+      margin-left: 20px;
+      margin-bottom: 5px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    button {
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    small.answer {
+      display: none;
+      color: #555;
+      margin-left: 10px;
+      font-style: italic;
+    }
+    #timer {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>German Exam</h1>
+    <!-- Timer Display -->
+    <div id="timer">Time Remaining: 02:00:00</div>
+    <form id="examForm">
+      <!-- Section 1: Multiple Choice (20 questions) -->
+      <div class="section" id="section1">
+        <h2>Section 1: Multiple Choice (20 questions)</h2>
+        <!-- Q1 -->
+        <div class="question" id="sec1_q1">
+          <p>1. Which phrase is correct for “Good morning” in German?</p>
+          <label><input type="radio" name="sec1_q1" value="A"> A) Gute Nacht</label><br>
+          <label><input type="radio" name="sec1_q1" value="B"> B) Guten Morgen</label><br>
+          <label><input type="radio" name="sec1_q1" value="C"> C) Guten Tag</label><br>
+          <label><input type="radio" name="sec1_q1" value="D"> D) Gute Mittag</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q1', this)">Show Answer</button>
+          <small id="answer_sec1_q1" class="answer">Answer: B) Guten Morgen</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec1_q2">
+          <p>2. The German pronoun for “you” (singular informal) is:</p>
+          <label><input type="radio" name="sec1_q2" value="A"> A) du</label><br>
+          <label><input type="radio" name="sec1_q2" value="B"> B) ihr</label><br>
+          <label><input type="radio" name="sec1_q2" value="C"> C) Sie</label><br>
+          <label><input type="radio" name="sec1_q2" value="D"> D) er</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q2', this)">Show Answer</button>
+          <small id="answer_sec1_q2" class="answer">Answer: A) du</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec1_q3">
+          <p>3. Which article is correct for <em>das Buch</em> in the accusative case?</p>
+          <label><input type="radio" name="sec1_q3" value="A"> A) den Buch</label><br>
+          <label><input type="radio" name="sec1_q3" value="B"> B) das Buch</label><br>
+          <label><input type="radio" name="sec1_q3" value="C"> C) die Buch</label><br>
+          <label><input type="radio" name="sec1_q3" value="D"> D) dem Buch</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q3', this)">Show Answer</button>
+          <small id="answer_sec1_q3" class="answer">Answer: B) das Buch</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec1_q4">
+          <p>4. In German, how do you say “Thank you”?</p>
+          <label><input type="radio" name="sec1_q4" value="A"> A) Bitte</label><br>
+          <label><input type="radio" name="sec1_q4" value="B"> B) Entschuldigung</label><br>
+          <label><input type="radio" name="sec1_q4" value="C"> C) Danke</label><br>
+          <label><input type="radio" name="sec1_q4" value="D"> D) Guten Abend</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q4', this)">Show Answer</button>
+          <small id="answer_sec1_q4" class="answer">Answer: C) Danke</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec1_q5">
+          <p>5. Which word is the correct translation for “cat” in German?</p>
+          <label><input type="radio" name="sec1_q5" value="A"> A) Katze</label><br>
+          <label><input type="radio" name="sec1_q5" value="B"> B) Hund</label><br>
+          <label><input type="radio" name="sec1_q5" value="C"> C) Maus</label><br>
+          <label><input type="radio" name="sec1_q5" value="D"> D) Kuh</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q5', this)">Show Answer</button>
+          <small id="answer_sec1_q5" class="answer">Answer: A) Katze</small>
+        </div>
+        <!-- Q6 -->
+        <div class="question" id="sec1_q6">
+          <p>6. How do you say “I am hungry” in German?</p>
+          <label><input type="radio" name="sec1_q6" value="A"> A) Ich habe Durst</label><br>
+          <label><input type="radio" name="sec1_q6" value="B"> B) Ich bin Hunger</label><br>
+          <label><input type="radio" name="sec1_q6" value="C"> C) Ich habe Hunger</label><br>
+          <label><input type="radio" name="sec1_q6" value="D"> D) Ich esse Hunger</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q6', this)">Show Answer</button>
+          <small id="answer_sec1_q6" class="answer">Answer: C) Ich habe Hunger</small>
+        </div>
+        <!-- Q7 -->
+        <div class="question" id="sec1_q7">
+          <p>7. The correct conjugation of <em>sein</em> for er/sie/es is:</p>
+          <label><input type="radio" name="sec1_q7" value="A"> A) bin</label><br>
+          <label><input type="radio" name="sec1_q7" value="B"> B) ist</label><br>
+          <label><input type="radio" name="sec1_q7" value="C"> C) seid</label><br>
+          <label><input type="radio" name="sec1_q7" value="D"> D) sind</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q7', this)">Show Answer</button>
+          <small id="answer_sec1_q7" class="answer">Answer: B) ist</small>
+        </div>
+        <!-- Q8 -->
+        <div class="question" id="sec1_q8">
+          <p>8. How do you form the plural of <em>das Kind</em>?</p>
+          <label><input type="radio" name="sec1_q8" value="A"> A) die Kinde</label><br>
+          <label><input type="radio" name="sec1_q8" value="B"> B) die Kinder</label><br>
+          <label><input type="radio" name="sec1_q8" value="C"> C) das Kindern</label><br>
+          <label><input type="radio" name="sec1_q8" value="D"> D) die Kinds</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q8', this)">Show Answer</button>
+          <small id="answer_sec1_q8" class="answer">Answer: B) die Kinder</small>
+        </div>
+        <!-- Q9 -->
+        <div class="question" id="sec1_q9">
+          <p>9. Which sentence is grammatically correct?</p>
+          <label><input type="radio" name="sec1_q9" value="A"> A) Ich gehe ins Kino morgen.</label><br>
+          <label><input type="radio" name="sec1_q9" value="B"> B) Ich morgen ins Kino gehe.</label><br>
+          <label><input type="radio" name="sec1_q9" value="C"> C) Morgen gehe ich ins Kino.</label><br>
+          <label><input type="radio" name="sec1_q9" value="D"> D) Ich gehe morgen Kino ins.</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q9', this)">Show Answer</button>
+          <small id="answer_sec1_q9" class="answer">Answer: C) Morgen gehe ich ins Kino.</small>
+        </div>
+        <!-- Q10 -->
+        <div class="question" id="sec1_q10">
+          <p>10. How do you say “Where do you come from?” in German (informal singular)?</p>
+          <label><input type="radio" name="sec1_q10" value="A"> A) Wo wohnen Sie?</label><br>
+          <label><input type="radio" name="sec1_q10" value="B"> B) Woher kommst du?</label><br>
+          <label><input type="radio" name="sec1_q10" value="C"> C) Wo ist du her?</label><br>
+          <label><input type="radio" name="sec1_q10" value="D"> D) Wo du kommst her?</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q10', this)">Show Answer</button>
+          <small id="answer_sec1_q10" class="answer">Answer: B) Woher kommst du?</small>
+        </div>
+        <!-- Q11 -->
+        <div class="question" id="sec1_q11">
+          <p>11. Which of the following is the correct German word for “chair”?</p>
+          <label><input type="radio" name="sec1_q11" value="A"> A) Tisch</label><br>
+          <label><input type="radio" name="sec1_q11" value="B"> B) Stuhl</label><br>
+          <label><input type="radio" name="sec1_q11" value="C"> C) Fenster</label><br>
+          <label><input type="radio" name="sec1_q11" value="D"> D) Tür</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q11', this)">Show Answer</button>
+          <small id="answer_sec1_q11" class="answer">Answer: B) Stuhl</small>
+        </div>
+        <!-- Q12 -->
+        <div class="question" id="sec1_q12">
+          <p>12. Which definite article is used with <em>Mädchen</em> in the nominative case?</p>
+          <label><input type="radio" name="sec1_q12" value="A"> A) der</label><br>
+          <label><input type="radio" name="sec1_q12" value="B"> B) die</label><br>
+          <label><input type="radio" name="sec1_q12" value="C"> C) das</label><br>
+          <label><input type="radio" name="sec1_q12" value="D"> D) den</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q12', this)">Show Answer</button>
+          <small id="answer_sec1_q12" class="answer">Answer: C) das</small>
+        </div>
+        <!-- Q13 -->
+        <div class="question" id="sec1_q13">
+          <p>13. How do you say “I like swimming” in German?</p>
+          <label><input type="radio" name="sec1_q13" value="A"> A) Ich mag schwimmen.</label><br>
+          <label><input type="radio" name="sec1_q13" value="B"> B) Ich schwimme mag.</label><br>
+          <label><input type="radio" name="sec1_q13" value="C"> C) Ich mag schwimmt.</label><br>
+          <label><input type="radio" name="sec1_q13" value="D"> D) Ich mag schwimmen zu.</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q13', this)">Show Answer</button>
+          <small id="answer_sec1_q13" class="answer">Answer: A) Ich mag schwimmen.</small>
+        </div>
+        <!-- Q14 -->
+        <div class="question" id="sec1_q14">
+          <p>14. Which pronoun correctly replaces <em>das Auto</em>?</p>
+          <label><input type="radio" name="sec1_q14" value="A"> A) sie</label><br>
+          <label><input type="radio" name="sec1_q14" value="B"> B) ihn</label><br>
+          <label><input type="radio" name="sec1_q14" value="C"> C) es</label><br>
+          <label><input type="radio" name="sec1_q14" value="D"> D) er</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q14', this)">Show Answer</button>
+          <small id="answer_sec1_q14" class="answer">Answer: C) es</small>
+        </div>
+        <!-- Q15 -->
+        <div class="question" id="sec1_q15">
+          <p>15. Which of the following is a correct translation of “We are learning German”?</p>
+          <label><input type="radio" name="sec1_q15" value="A"> A) Wir lernen Deutsch.</label><br>
+          <label><input type="radio" name="sec1_q15" value="B"> B) Wir lernst Deutsch.</label><br>
+          <label><input type="radio" name="sec1_q15" value="C"> C) Wir lernt Deutsch.</label><br>
+          <label><input type="radio" name="sec1_q15" value="D"> D) Wir lerne Deutsch.</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q15', this)">Show Answer</button>
+          <small id="answer_sec1_q15" class="answer">Answer: A) Wir lernen Deutsch.</small>
+        </div>
+        <!-- Q16 -->
+        <div class="question" id="sec1_q16">
+          <p>16. Which is the correct verb for “to eat” in German (for humans)?</p>
+          <label><input type="radio" name="sec1_q16" value="A"> A) fressen</label><br>
+          <label><input type="radio" name="sec1_q16" value="B"> B) essen</label><br>
+          <label><input type="radio" name="sec1_q16" value="C"> C) essen Sie</label><br>
+          <label><input type="radio" name="sec1_q16" value="D"> D) trinkt</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q16', this)">Show Answer</button>
+          <small id="answer_sec1_q16" class="answer">Answer: B) essen</small>
+        </div>
+        <!-- Q17 -->
+        <div class="question" id="sec1_q17">
+          <p>17. How do you say “What time is it?” in German?</p>
+          <label><input type="radio" name="sec1_q17" value="A"> A) Wie spät ist es?</label><br>
+          <label><input type="radio" name="sec1_q17" value="B"> B) Wie viel Uhr bist du?</label><br>
+          <label><input type="radio" name="sec1_q17" value="C"> C) Wie Uhr ist jetzt?</label><br>
+          <label><input type="radio" name="sec1_q17" value="D"> D) Was ist die Zeit?</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q17', this)">Show Answer</button>
+          <small id="answer_sec1_q17" class="answer">Answer: A) Wie spät ist es?</small>
+        </div>
+        <!-- Q18 -->
+        <div class="question" id="sec1_q18">
+          <p>18. Which of these is the correct form of “to go” in the present tense for <em>wir</em>?</p>
+          <label><input type="radio" name="sec1_q18" value="A"> A) wir gehe</label><br>
+          <label><input type="radio" name="sec1_q18" value="B"> B) wir geht</label><br>
+          <label><input type="radio" name="sec1_q18" value="C"> C) wir gehst</label><br>
+          <label><input type="radio" name="sec1_q18" value="D"> D) wir gehen</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q18', this)">Show Answer</button>
+          <small id="answer_sec1_q18" class="answer">Answer: D) wir gehen</small>
+        </div>
+        <!-- Q19 -->
+        <div class="question" id="sec1_q19">
+          <p>19. Which question is correct to ask “Do you speak English?” in German (informal singular)?</p>
+          <label><input type="radio" name="sec1_q19" value="A"> A) Sprichst du Englisch?</label><br>
+          <label><input type="radio" name="sec1_q19" value="B"> B) Sprecht du Englisch?</label><br>
+          <label><input type="radio" name="sec1_q19" value="C"> C) Spricht ihr Englisch?</label><br>
+          <label><input type="radio" name="sec1_q19" value="D"> D) Sprichst du Englisch?</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q19', this)">Show Answer</button>
+          <small id="answer_sec1_q19" class="answer">Answer: A) Sprichst du Englisch?</small>
+        </div>
+        <!-- Q20 -->
+        <div class="question" id="sec1_q20">
+          <p>20. How do you say “I am 20 years old” in German?</p>
+          <label><input type="radio" name="sec1_q20" value="A"> A) Ich bin 20 Jahre alt.</label><br>
+          <label><input type="radio" name="sec1_q20" value="B"> B) Ich habe 20 Jahre alt.</label><br>
+          <label><input type="radio" name="sec1_q20" value="C"> C) Ich bin 20 alt Jahre.</label><br>
+          <label><input type="radio" name="sec1_q20" value="D"> D) Ich habe 20 alt.</label>
+          <br>
+          <button type="button" onclick="toggleAnswer('answer_sec1_q20', this)">Show Answer</button>
+          <small id="answer_sec1_q20" class="answer">Answer: A) Ich bin 20 Jahre alt.</small>
+        </div>
+      </div>
+
+      <!-- Section 2: Fill in the Blank (20 questions) -->
+      <div class="section" id="section2">
+        <h2>Section 2: Fill in the Blank (20 questions)</h2>
+        <!-- Q1 -->
+        <div class="question" id="sec2_q1">
+          <p>1. Guten _______! (morning)</p>
+          <input type="text" name="sec2_q1">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q1', this)">Show Answer</button>
+          <small id="answer_sec2_q1" class="answer">Answer: Morgen</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec2_q2">
+          <p>2. Ich _______ Ahmed. (am called)</p>
+          <input type="text" name="sec2_q2">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q2', this)">Show Answer</button>
+          <small id="answer_sec2_q2" class="answer">Answer: heiße</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec2_q3">
+          <p>3. Woher _______ du? (come)</p>
+          <input type="text" name="sec2_q3">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q3', this)">Show Answer</button>
+          <small id="answer_sec2_q3" class="answer">Answer: kommst</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec2_q4">
+          <p>4. Ich _______ aus Ägypten. (come)</p>
+          <input type="text" name="sec2_q4">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q4', this)">Show Answer</button>
+          <small id="answer_sec2_q4" class="answer">Answer: komme</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec2_q5">
+          <p>5. _______ heißt das auf Deutsch? (What)</p>
+          <input type="text" name="sec2_q5">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q5', this)">Show Answer</button>
+          <small id="answer_sec2_q5" class="answer">Answer: Wie</small>
+        </div>
+        <!-- Q6 -->
+        <div class="question" id="sec2_q6">
+          <p>6. Das ist _______ Buch. (my)</p>
+          <input type="text" name="sec2_q6">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q6', this)">Show Answer</button>
+          <small id="answer_sec2_q6" class="answer">Answer: mein</small>
+        </div>
+        <!-- Q7 -->
+        <div class="question" id="sec2_q7">
+          <p>7. _______ lernst du Deutsch? (Why)</p>
+          <input type="text" name="sec2_q7">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q7', this)">Show Answer</button>
+          <small id="answer_sec2_q7" class="answer">Answer: Warum</small>
+        </div>
+        <!-- Q8 -->
+        <div class="question" id="sec2_q8">
+          <p>8. Ich _______ heute ins Kino. (go)</p>
+          <input type="text" name="sec2_q8">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q8', this)">Show Answer</button>
+          <small id="answer_sec2_q8" class="answer">Answer: gehe</small>
+        </div>
+        <!-- Q9 -->
+        <div class="question" id="sec2_q9">
+          <p>9. Sie _______ in Berlin. (lives)</p>
+          <input type="text" name="sec2_q9">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q9', this)">Show Answer</button>
+          <small id="answer_sec2_q9" class="answer">Answer: wohnt</small>
+        </div>
+        <!-- Q10 -->
+        <div class="question" id="sec2_q10">
+          <p>10. Wir _______ zusammen in der Schule. (learn)</p>
+          <input type="text" name="sec2_q10">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q10', this)">Show Answer</button>
+          <small id="answer_sec2_q10" class="answer">Answer: lernen</small>
+        </div>
+        <!-- Q11 -->
+        <div class="question" id="sec2_q11">
+          <p>11. _______ du Kaffee? (Do you like)</p>
+          <input type="text" name="sec2_q11">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q11', this)">Show Answer</button>
+          <small id="answer_sec2_q11" class="answer">Answer: Magst</small>
+        </div>
+        <!-- Q12 -->
+        <div class="question" id="sec2_q12">
+          <p>12. Wie _______ du? (are you feeling)</p>
+          <input type="text" name="sec2_q12">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q12', this)">Show Answer</button>
+          <small id="answer_sec2_q12" class="answer">Answer: fühlst</small>
+        </div>
+        <!-- Q13 -->
+        <div class="question" id="sec2_q13">
+          <p>13. _______ ist dein Name? (What)</p>
+          <input type="text" name="sec2_q13">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q13', this)">Show Answer</button>
+          <small id="answer_sec2_q13" class="answer">Answer: Wie</small>
+        </div>
+        <!-- Q14 -->
+        <div class="question" id="sec2_q14">
+          <p>14. Ich habe _______ Hunger. (a little)</p>
+          <input type="text" name="sec2_q14">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q14', this)">Show Answer</button>
+          <small id="answer_sec2_q14" class="answer">Answer: ein wenig</small>
+        </div>
+        <!-- Q15 -->
+        <div class="question" id="sec2_q15">
+          <p>15. Kannst du das bitte _______ ? (repeat)</p>
+          <input type="text" name="sec2_q15">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q15', this)">Show Answer</button>
+          <small id="answer_sec2_q15" class="answer">Answer: wiederholen</small>
+        </div>
+        <!-- Q16 -->
+        <div class="question" id="sec2_q16">
+          <p>16. Entschuldigung, _______ kostet das? (how much)</p>
+          <input type="text" name="sec2_q16">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q16', this)">Show Answer</button>
+          <small id="answer_sec2_q16" class="answer">Answer: Wie viel</small>
+        </div>
+        <!-- Q17 -->
+        <div class="question" id="sec2_q17">
+          <p>17. _______ bist du so spät? (Why)</p>
+          <input type="text" name="sec2_q17">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q17', this)">Show Answer</button>
+          <small id="answer_sec2_q17" class="answer">Answer: Warum</small>
+        </div>
+        <!-- Q18 -->
+        <div class="question" id="sec2_q18">
+          <p>18. Ich _______ meine Hausaufgaben machen. (must)</p>
+          <input type="text" name="sec2_q18">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q18', this)">Show Answer</button>
+          <small id="answer_sec2_q18" class="answer">Answer: muss</small>
+        </div>
+        <!-- Q19 -->
+        <div class="question" id="sec2_q19">
+          <p>19. _______ Zeit ist es? (What)</p>
+          <input type="text" name="sec2_q19">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q19', this)">Show Answer</button>
+          <small id="answer_sec2_q19" class="answer">Answer: Welche</small>
+        </div>
+        <!-- Q20 -->
+        <div class="question" id="sec2_q20">
+          <p>20. _______ Uhr fängt der Unterricht an? (At what)</p>
+          <input type="text" name="sec2_q20">
+          <button type="button" onclick="toggleAnswer('answer_sec2_q20', this)">Show Answer</button>
+          <small id="answer_sec2_q20" class="answer">Answer: Um wieviel</small>
+        </div>
+      </div>
+
+      <!-- Section 3: Translate (15 questions) -->
+      <div class="section" id="section3">
+        <h2>Section 3: Translate (15 questions)</h2>
+        <h3>Part A: English to German</h3>
+        <!-- Q1 -->
+        <div class="question" id="sec3_q1">
+          <p>1. I live in a small apartment.</p>
+          <textarea name="sec3_q1" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q1', this)">Show Answer</button>
+          <small id="answer_sec3_q1" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec3_q2">
+          <p>2. My father is a doctor.</p>
+          <textarea name="sec3_q2" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q2', this)">Show Answer</button>
+          <small id="answer_sec3_q2" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec3_q3">
+          <p>3. Do you have any siblings?</p>
+          <textarea name="sec3_q3" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q3', this)">Show Answer</button>
+          <small id="answer_sec3_q3" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec3_q4">
+          <p>4. We are going to the supermarket.</p>
+          <textarea name="sec3_q4" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q4', this)">Show Answer</button>
+          <small id="answer_sec3_q4" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec3_q5">
+          <p>5. I like reading books in my free time.</p>
+          <textarea name="sec3_q5" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q5', this)">Show Answer</button>
+          <small id="answer_sec3_q5" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q6 -->
+        <div class="question" id="sec3_q6">
+          <p>6. The weather is nice today.</p>
+          <textarea name="sec3_q6" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q6', this)">Show Answer</button>
+          <small id="answer_sec3_q6" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q7 -->
+        <div class="question" id="sec3_q7">
+          <p>7. She works as a teacher.</p>
+          <textarea name="sec3_q7" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q7', this)">Show Answer</button>
+          <small id="answer_sec3_q7" class="answer">Answer: Manual grading</small>
+        </div>
+        <h3>Part B: German to English</h3>
+        <!-- Q8 -->
+        <div class="question" id="sec3_q8">
+          <p>8. Ich habe heute keine Zeit.</p>
+          <textarea name="sec3_q8" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q8', this)">Show Answer</button>
+          <small id="answer_sec3_q8" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q9 -->
+        <div class="question" id="sec3_q9">
+          <p>9. Er lernt Deutsch, weil er in Deutschland studieren will.</p>
+          <textarea name="sec3_q9" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q9', this)">Show Answer</button>
+          <small id="answer_sec3_q9" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q10 -->
+        <div class="question" id="sec3_q10">
+          <p>10. Wo ist das Badezimmer?</p>
+          <textarea name="sec3_q10" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q10', this)">Show Answer</button>
+          <small id="answer_sec3_q10" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q11 -->
+        <div class="question" id="sec3_q11">
+          <p>11. Wir fahren morgen nach Hamburg.</p>
+          <textarea name="sec3_q11" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q11', this)">Show Answer</button>
+          <small id="answer_sec3_q11" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q12 -->
+        <div class="question" id="sec3_q12">
+          <p>12. Ich brauche ein neues Handy.</p>
+          <textarea name="sec3_q12" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q12', this)">Show Answer</button>
+          <small id="answer_sec3_q12" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q13 -->
+        <div class="question" id="sec3_q13">
+          <p>13. Hast du schon gefrühstückt?</p>
+          <textarea name="sec3_q13" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q13', this)">Show Answer</button>
+          <small id="answer_sec3_q13" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q14 -->
+        <div class="question" id="sec3_q14">
+          <p>14. Wie viele Sprachen sprichst du?</p>
+          <textarea name="sec3_q14" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q14', this)">Show Answer</button>
+          <small id="answer_sec3_q14" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q15 -->
+        <div class="question" id="sec3_q15">
+          <p>15. Das ist mir zu teuer.</p>
+          <textarea name="sec3_q15" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec3_q15', this)">Show Answer</button>
+          <small id="answer_sec3_q15" class="answer">Answer: Manual grading</small>
+        </div>
+      </div>
+
+      <!-- Section 4: Dialogue (15 questions) -->
+      <div class="section" id="section4">
+        <h2>Section 4: Dialogue (15 questions)</h2>
+        <h3>Fill in the Missing Parts</h3>
+        <!-- Q1 -->
+        <div class="question" id="sec4_q1">
+          <p>Anna: Hallo, wie heißt du?<br>
+          Jonas: _______ (1)</p>
+          <input type="text" name="sec4_q1">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q1', this)">Show Answer</button>
+          <small id="answer_sec4_q1" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec4_q2">
+          <p>Anna: Woher kommst du?<br>
+          Jonas: Ich komme aus _______ (2)</p>
+          <input type="text" name="sec4_q2">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q2', this)">Show Answer</button>
+          <small id="answer_sec4_q2" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec4_q3">
+          <p>Anna: Wohnst du jetzt in Berlin?<br>
+          Jonas: Ja, ich _______ (3)</p>
+          <input type="text" name="sec4_q3">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q3', this)">Show Answer</button>
+          <small id="answer_sec4_q3" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec4_q4">
+          <p>Anna: Was machst du hier?<br>
+          Jonas: Ich _______ (4) Deutsch an der Universität.</p>
+          <input type="text" name="sec4_q4">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q4', this)">Show Answer</button>
+          <small id="answer_sec4_q4" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec4_q5">
+          <p>Anna: Wie lange bleibst du?<br>
+          Jonas: _______ (5) ein Jahr.</p>
+          <input type="text" name="sec4_q5">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q5', this)">Show Answer</button>
+          <small id="answer_sec4_q5" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q6 -->
+        <div class="question" id="sec4_q6">
+          <p>Anna: Hast du schon Freunde hier?<br>
+          Jonas: Ja, _______ (6) Freunde in meinem Kurs.</p>
+          <input type="text" name="sec4_q6">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q6', this)">Show Answer</button>
+          <small id="answer_sec4_q6" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q7 -->
+        <div class="question" id="sec4_q7">
+          <p>Anna: Gehen wir heute Abend ins Kino?<br>
+          Jonas: _______ (7), das klingt gut!</p>
+          <input type="text" name="sec4_q7">
+          <button type="button" onclick="toggleAnswer('answer_sec4_q7', this)">Show Answer</button>
+          <small id="answer_sec4_q7" class="answer">Answer: Manual grading</small>
+        </div>
+        <h3>Answer the Following Questions</h3>
+        <!-- Q8 -->
+        <div class="question" id="sec4_q8">
+          <p>8. What does Jonas study?</p>
+          <textarea name="sec4_q8" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q8', this)">Show Answer</button>
+          <small id="answer_sec4_q8" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q9 -->
+        <div class="question" id="sec4_q9">
+          <p>9. How long does Jonas plan to stay in Berlin?</p>
+          <textarea name="sec4_q9" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q9', this)">Show Answer</button>
+          <small id="answer_sec4_q9" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q10 -->
+        <div class="question" id="sec4_q10">
+          <p>10. What do Anna and Jonas plan to do in the evening?</p>
+          <textarea name="sec4_q10" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q10', this)">Show Answer</button>
+          <small id="answer_sec4_q10" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q11 -->
+        <div class="question" id="sec4_q11">
+          <p>11. Identify one verb in the dialogue that is in the present tense.</p>
+          <textarea name="sec4_q11" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q11', this)">Show Answer</button>
+          <small id="answer_sec4_q11" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q12 -->
+        <div class="question" id="sec4_q12">
+          <p>12. Identify one pronoun in the dialogue.</p>
+          <textarea name="sec4_q12" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q12', this)">Show Answer</button>
+          <small id="answer_sec4_q12" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q13 -->
+        <div class="question" id="sec4_q13">
+          <p>13. Write the question Anna might ask Jonas to find out his age (in German).</p>
+          <textarea name="sec4_q13" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q13', this)">Show Answer</button>
+          <small id="answer_sec4_q13" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q14 -->
+        <div class="question" id="sec4_q14">
+          <p>14. Write a possible response Jonas could give about his age (in German).</p>
+          <textarea name="sec4_q14" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q14', this)">Show Answer</button>
+          <small id="answer_sec4_q14" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q15 -->
+        <div class="question" id="sec4_q15">
+          <p>15. Based on the dialogue, do Anna and Jonas seem to be formal or informal with each other? (Explain briefly in English.)</p>
+          <textarea name="sec4_q15" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec4_q15', this)">Show Answer</button>
+          <small id="answer_sec4_q15" class="answer">Answer: Manual grading</small>
+        </div>
+      </div>
+
+      <!-- Section 5: Reading Comprehension (10 questions) -->
+      <div class="section" id="section5">
+        <h2>Section 5: Reading Comprehension (10 questions)</h2>
+        <p><em>Read the following text:</em></p>
+        <blockquote>
+          Mein Name ist Lisa. Ich bin 25 Jahre alt und komme aus Österreich. Jetzt wohne ich in München. Ich arbeite als Kellnerin in einem Restaurant. In meiner Freizeit lerne ich Deutsch, weil ich mein Deutsch verbessern möchte. Ich gehe auch gerne schwimmen und treffe Freunde im Park. Am Wochenende besuche ich oft meine Eltern in Österreich.
+        </blockquote>
+        <!-- Q1 -->
+        <div class="question" id="sec5_q1">
+          <p>1. Where is Lisa from?</p>
+          <input type="text" name="sec5_q1">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q1', this)">Show Answer</button>
+          <small id="answer_sec5_q1" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec5_q2">
+          <p>2. How old is she?</p>
+          <input type="text" name="sec5_q2">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q2', this)">Show Answer</button>
+          <small id="answer_sec5_q2" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec5_q3">
+          <p>3. Where does she live now?</p>
+          <input type="text" name="sec5_q3">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q3', this)">Show Answer</button>
+          <small id="answer_sec5_q3" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec5_q4">
+          <p>4. What is her job?</p>
+          <input type="text" name="sec5_q4">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q4', this)">Show Answer</button>
+          <small id="answer_sec5_q4" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec5_q5">
+          <p>5. Why is she learning German?</p>
+          <input type="text" name="sec5_q5">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q5', this)">Show Answer</button>
+          <small id="answer_sec5_q5" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q6 -->
+        <div class="question" id="sec5_q6">
+          <p>6. What does she like to do in her free time?</p>
+          <input type="text" name="sec5_q6">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q6', this)">Show Answer</button>
+          <small id="answer_sec5_q6" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q7 -->
+        <div class="question" id="sec5_q7">
+          <p>7. Where does she often go on weekends?</p>
+          <input type="text" name="sec5_q7">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q7', this)">Show Answer</button>
+          <small id="answer_sec5_q7" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q8 -->
+        <div class="question" id="sec5_q8">
+          <p>8. Does the text say anything about siblings?</p>
+          <input type="text" name="sec5_q8">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q8', this)">Show Answer</button>
+          <small id="answer_sec5_q8" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q9 -->
+        <div class="question" id="sec5_q9">
+          <p>9. Which city does she currently live in?</p>
+          <input type="text" name="sec5_q9">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q9', this)">Show Answer</button>
+          <small id="answer_sec5_q9" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q10 -->
+        <div class="question" id="sec5_q10">
+          <p>10. Name one hobby Lisa has.</p>
+          <input type="text" name="sec5_q10">
+          <button type="button" onclick="toggleAnswer('answer_sec5_q10', this)">Show Answer</button>
+          <small id="answer_sec5_q10" class="answer">Answer: Manual grading</small>
+        </div>
+      </div>
+
+      <!-- Section 6: Grammar (10 questions) -->
+      <div class="section" id="section6">
+        <h2>Section 6: Grammar (10 questions)</h2>
+        <!-- 6.1 -->
+        <div class="question" id="sec6_q1">
+          <p>1. Write the correct definite article for each noun (nominative case):</p>
+          <div class="sub-question">a) Tisch: <input type="text" name="sec6_q1a"></div>
+          <div class="sub-question">b) Fenster: <input type="text" name="sec6_q1b"></div>
+          <div class="sub-question">c) Mädchen: <input type="text" name="sec6_q1c"></div>
+          <div class="sub-question">d) Hund: <input type="text" name="sec6_q1d"></div>
+          <div class="sub-question">e) Apfel: <input type="text" name="sec6_q1e"></div>
+          <button type="button" onclick="toggleAnswer('answer_sec6_q1', this)">Show Answer</button>
+          <small id="answer_sec6_q1" class="answer">Answer: a) der, b) das, c) das, d) der, e) der</small>
+        </div>
+        <!-- 6.2 -->
+        <div class="question" id="sec6_q2">
+          <p>2. Conjugate the verb <strong>haben</strong> in the present tense:</p>
+          <div class="sub-question">ich: <input type="text" name="sec6_q2_ich"></div>
+          <div class="sub-question">du: <input type="text" name="sec6_q2_du"></div>
+          <div class="sub-question">er/sie/es: <input type="text" name="sec6_q2_er"></div>
+          <div class="sub-question">wir: <input type="text" name="sec6_q2_wir"></div>
+          <div class="sub-question">ihr: <input type="text" name="sec6_q2_ihr"></div>
+          <div class="sub-question">Sie: <input type="text" name="sec6_q2_Sie"></div>
+          <button type="button" onclick="toggleAnswer('answer_sec6_q2', this)">Show Answer</button>
+          <small id="answer_sec6_q2" class="answer">Answer: ich: habe, du: hast, er/sie/es: hat, wir: haben, ihr: habt, Sie: haben</small>
+        </div>
+        <!-- 6.3 -->
+        <div class="question" id="sec6_q3">
+          <p>3. Identify the direct object in the sentence: "Ich kaufe einen Apfel."</p>
+          <input type="text" name="sec6_q3">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q3', this)">Show Answer</button>
+          <small id="answer_sec6_q3" class="answer">Answer: einen Apfel</small>
+        </div>
+        <!-- 6.4 -->
+        <div class="question" id="sec6_q4">
+          <p>4. Change the sentence to plural: "Der Mann ist nett."</p>
+          <input type="text" name="sec6_q4">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q4', this)">Show Answer</button>
+          <small id="answer_sec6_q4" class="answer">Answer: die Männer sind nett</small>
+        </div>
+        <!-- 6.5 -->
+        <div class="question" id="sec6_q5">
+          <p>5. Change the following sentence into a yes/no question: "Du wohnst in Köln."</p>
+          <input type="text" name="sec6_q5">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q5', this)">Show Answer</button>
+          <small id="answer_sec6_q5" class="answer">Answer: Wohnst du in Köln?</small>
+        </div>
+        <!-- 6.6 -->
+        <div class="question" id="sec6_q6">
+          <p>6. What is the difference between <strong>du</strong> and <strong>Sie</strong> in German?</p>
+          <textarea name="sec6_q6" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec6_q6', this)">Show Answer</button>
+          <small id="answer_sec6_q6" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- 6.7 -->
+        <div class="question" id="sec6_q7">
+          <p>7. Correct the sentence: "Ich gehe am Montag ins Schule."</p>
+          <input type="text" name="sec6_q7">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q7', this)">Show Answer</button>
+          <small id="answer_sec6_q7" class="answer">Answer: Ich gehe am Montag in die Schule</small>
+        </div>
+        <!-- 6.8 -->
+        <div class="question" id="sec6_q8">
+          <p>8. Fill in the blank: "Wir _______ heute zu Hause."</p>
+          <input type="text" name="sec6_q8">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q8', this)">Show Answer</button>
+          <small id="answer_sec6_q8" class="answer">Answer: sind</small>
+        </div>
+        <!-- 6.9 -->
+        <div class="question" id="sec6_q9">
+          <p>9. Fill in the blank: "Wo ist das Buch? _______ ist auf dem Tisch."</p>
+          <input type="text" name="sec6_q9">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q9', this)">Show Answer</button>
+          <small id="answer_sec6_q9" class="answer">Answer: es</small>
+        </div>
+        <!-- 6.10 -->
+        <div class="question" id="sec6_q10">
+          <p>10. Rewrite the sentence in the present perfect tense (Perfekt): "Ich kaufe heute ein Buch."</p>
+          <input type="text" name="sec6_q10">
+          <button type="button" onclick="toggleAnswer('answer_sec6_q10', this)">Show Answer</button>
+          <small id="answer_sec6_q10" class="answer">Answer: ich habe heute ein buch gekauft</small>
+        </div>
+      </div>
+
+      <!-- Section 7: Writing (5 questions) -->
+      <div class="section" id="section7">
+        <h2>Section 7: Writing (5 questions)</h2>
+        <!-- Q1 -->
+        <div class="question" id="sec7_q1">
+          <p>1. Write a short introduction of yourself (3–4 sentences). Include your name, age, where you’re from, and what you do.</p>
+          <textarea name="sec7_q1" rows="4"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec7_q1', this)">Show Answer</button>
+          <small id="answer_sec7_q1" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec7_q2">
+          <p>2. Describe your daily routine (5–6 sentences). Use at least three different verbs in the present tense.</p>
+          <textarea name="sec7_q2" rows="4"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec7_q2', this)">Show Answer</button>
+          <small id="answer_sec7_q2" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec7_q3">
+          <p>3. Write a short paragraph (4–5 sentences) about your family. Mention how many siblings you have and what your parents do.</p>
+          <textarea name="sec7_q3" rows="4"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec7_q3', this)">Show Answer</button>
+          <small id="answer_sec7_q3" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec7_q4">
+          <p>4. Imagine you are in a restaurant in Germany. Write 3–4 sentences of a conversation you might have with the waiter or waitress. Include a greeting, an order, and a polite request.</p>
+          <textarea name="sec7_q4" rows="4"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec7_q4', this)">Show Answer</button>
+          <small id="answer_sec7_q4" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec7_q5">
+          <p>5. Write a short note (3–4 sentences) to your friend, telling them why you cannot meet today and suggesting another day.</p>
+          <textarea name="sec7_q5" rows="4"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec7_q5', this)">Show Answer</button>
+          <small id="answer_sec7_q5" class="answer">Answer: Manual grading</small>
+        </div>
+      </div>
+
+      <!-- Section 8: Bonus (5 questions) -->
+      <div class="section" id="section8">
+        <h2>Section 8: Bonus (5 questions)</h2>
+        <!-- Q1 -->
+        <div class="question" id="sec8_q1">
+          <p>1. Formulate a polite request in German to ask for a train ticket to Berlin (1–2 sentences).</p>
+          <textarea name="sec8_q1" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec8_q1', this)">Show Answer</button>
+          <small id="answer_sec8_q1" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q2 -->
+        <div class="question" id="sec8_q2">
+          <p>2. Write two sentences describing the weather today, using the words <em>sonnig</em> and <em>bewölkt</em>.</p>
+          <textarea name="sec8_q2" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec8_q2', this)">Show Answer</button>
+          <small id="answer_sec8_q2" class="answer">Answer: Manual grading</small>
+        </div>
+        <!-- Q3 -->
+        <div class="question" id="sec8_q3">
+          <p>3. Translate this sentence into German: "I have been learning German for three months."</p>
+          <input type="text" name="sec8_q3">
+          <button type="button" onclick="toggleAnswer('answer_sec8_q3', this)">Show Answer</button>
+          <small id="answer_sec8_q3" class="answer">Answer: ich lerne seit drei monaten deutsch</small>
+        </div>
+        <!-- Q4 -->
+        <div class="question" id="sec8_q4">
+          <p>4. Write the comparative and superlative forms of the adjective “groß” (big).</p>
+          <input type="text" name="sec8_q4">
+          <button type="button" onclick="toggleAnswer('answer_sec8_q4', this)">Show Answer</button>
+          <small id="answer_sec8_q4" class="answer">Answer: größer, am größten</small>
+        </div>
+        <!-- Q5 -->
+        <div class="question" id="sec8_q5">
+          <p>5. Create a short sentence using a separable verb (e.g., aufstehen, einkaufen, fernsehen) in the present tense.</p>
+          <textarea name="sec8_q5" rows="2"></textarea>
+          <button type="button" onclick="toggleAnswer('answer_sec8_q5', this)">Show Answer</button>
+          <small id="answer_sec8_q5" class="answer">Answer: Manual grading</small>
+        </div>
+      </div>
+
+      <!-- Submit/Reset Buttons -->
+      <div style="text-align: center;">
+        <button type="button" onclick="gradeExam()">Submit Exam</button>
+        <button type="reset">Reset Exam</button>
+      </div>
+    </form>
+    <div id="result" style="margin-top: 20px; text-align: center; font-size: 18px;"></div>
+  </div>
+
+  <script>
+    // Toggle answer display and change button text
+    function toggleAnswer(answerId, btn) {
+      const answerElem = document.getElementById(answerId);
+      if (answerElem.style.display === "none" || answerElem.style.display === "") {
+        answerElem.style.display = "inline";
+        btn.textContent = "Hide Answer";
+      } else {
+        answerElem.style.display = "none";
+        btn.textContent = "Show Answer";
+      }
+    }
+
+    // Timer code: 2 hours = 7200 seconds
+    let timeRemaining = 7200;
+    const timerElement = document.getElementById('timer');
+    const countdown = setInterval(function() {
+      const hours = Math.floor(timeRemaining / 3600);
+      const minutes = Math.floor((timeRemaining % 3600) / 60);
+      const seconds = timeRemaining % 60;
+      timerElement.textContent =
+        "Time Remaining: " +
+        (hours < 10 ? "0" + hours : hours) + ":" +
+        (minutes < 10 ? "0" + minutes : minutes) + ":" +
+        (seconds < 10 ? "0" + seconds : seconds);
+      if (timeRemaining <= 0) {
+        clearInterval(countdown);
+        alert("Time is up! The exam will now be submitted.");
+        gradeExam();
+      }
+      timeRemaining--;
+    }, 1000);
+
+    // Auto-grading function (same as before)
+    function gradeExam() {
+      let totalScore = 0;
+      const maxScore = 60; // Total auto-graded points
+      
+      // --- Section 1: Multiple Choice ---
+      const sec1Answers = {
+        sec1_q1: "B",
+        sec1_q2: "A",
+        sec1_q3: "B",
+        sec1_q4: "C",
+        sec1_q5: "A",
+        sec1_q6: "C",
+        sec1_q7: "B",
+        sec1_q8: "B",
+        sec1_q9: "C",
+        sec1_q10: "B",
+        sec1_q11: "B",
+        sec1_q12: "C",
+        sec1_q13: "A",
+        sec1_q14: "C",
+        sec1_q15: "A",
+        sec1_q16: "B",
+        sec1_q17: "A",
+        sec1_q18: "D",
+        sec1_q19: "A",
+        sec1_q20: "A"
+      };
+      for (let key in sec1Answers) {
+        let radios = document.getElementsByName(key);
+        for (let radio of radios) {
+          if (radio.checked && radio.value === sec1Answers[key]) {
+            totalScore++;
+          }
+        }
+      }
+      
+      // --- Section 2: Fill in the Blank ---
+      const sec2Answers = {
+        sec2_q1: "Morgen",
+        sec2_q2: "heiße",
+        sec2_q3: "kommst",
+        sec2_q4: "komme",
+        sec2_q5: "Wie",
+        sec2_q6: "mein",
+        sec2_q7: "Warum",
+        sec2_q8: "gehe",
+        sec2_q9: "wohnt",
+        sec2_q10: "lernen",
+        sec2_q11: "Magst",
+        sec2_q12: "fühlst",
+        sec2_q13: "Wie",
+        sec2_q14: "ein wenig",
+        sec2_q15: "wiederholen",
+        sec2_q16: "Wie viel",
+        sec2_q17: "Warum",
+        sec2_q18: "muss",
+        sec2_q19: "Welche",
+        sec2_q20: "Um wieviel"
+      };
+      for (let key in sec2Answers) {
+        let userAnswer = document.getElementsByName(key)[0].value.trim();
+        if (userAnswer.toLowerCase() === sec2Answers[key].toLowerCase()) {
+          totalScore++;
+        }
+      }
+      
+      // --- Section 6: Grammar ---
+      // 6.1: Definite articles
+      const sec6_q1Answers = {
+        sec6_q1a: "der",
+        sec6_q1b: "das",
+        sec6_q1c: "das",
+        sec6_q1d: "der",
+        sec6_q1e: "der"
+      };
+      for (let key in sec6_q1Answers) {
+        let ans = document.getElementsByName(key)[0].value.trim();
+        if (ans.toLowerCase() === sec6_q1Answers[key]) {
+          totalScore++;
+        }
+      }
+      // 6.2: Conjugation of 'haben'
+      const sec6_q2Answers = {
+        sec6_q2_ich: "habe",
+        sec6_q2_du: "hast",
+        sec6_q2_er: "hat",
+        sec6_q2_wir: "haben",
+        sec6_q2_ihr: "habt",
+        sec6_q2_Sie: "haben"
+      };
+      for (let key in sec6_q2Answers) {
+        let ans = document.getElementsByName(key)[0].value.trim();
+        if (ans.toLowerCase() === sec6_q2Answers[key]) {
+          totalScore++;
+        }
+      }
+      // 6.3: Direct object
+      let ans6_3 = document.getElementsByName("sec6_q3")[0].value.trim();
+      if (ans6_3.toLowerCase() === "einen apfel") totalScore++;
+      // 6.4: Plural form
+      let ans6_4 = document.getElementsByName("sec6_q4")[0].value.trim();
+      if (ans6_4.toLowerCase() === "die männer sind nett") totalScore++;
+      // 6.5: Yes/No question
+      let ans6_5 = document.getElementsByName("sec6_q5")[0].value.trim();
+      if (ans6_5.toLowerCase() === "wohnst du in köln?" || ans6_5.toLowerCase() === "wohnst du in koln?") totalScore++;
+      // 6.7: Correct the sentence
+      let ans6_7 = document.getElementsByName("sec6_q7")[0].value.trim();
+      if (ans6_7.toLowerCase() === "ich gehe am montag in die schule" || ans6_7.toLowerCase() === "ich gehe am montag in die schule.") totalScore++;
+      // 6.8: Fill in blank with sein
+      let ans6_8 = document.getElementsByName("sec6_q8")[0].value.trim();
+      if (ans6_8.toLowerCase() === "sind") totalScore++;
+      // 6.9: Fill in the blank with pronoun
+      let ans6_9 = document.getElementsByName("sec6_q9")[0].value.trim();
+      if (ans6_9.toLowerCase() === "es") totalScore++;
+      // 6.10: Present perfect tense
+      let ans6_10 = document.getElementsByName("sec6_q10")[0].value.trim();
+      if (ans6_10.toLowerCase() === "ich habe heute ein buch gekauft" || ans6_10.toLowerCase() === "ich habe heute ein buch gekauft.") totalScore++;
+      
+      // --- Section 8: Bonus (auto-graded items) ---
+      // 8.3: Translate to German
+      let ans8_3 = document.getElementsByName("sec8_q3")[0].value.trim();
+      if (ans8_3.toLowerCase() === "ich lerne seit drei monaten deutsch" || ans8_3.toLowerCase() === "ich lerne seit drei monaten deutsch.") totalScore++;
+      // 8.4: Comparative and superlative of "groß"
+      let ans8_4 = document.getElementsByName("sec8_q4")[0].value.trim();
+      if (ans8_4.toLowerCase() === "größer, am größten" || ans8_4.toLowerCase() === "großer, am größten") totalScore++;
+      
+      // --- Display Result ---
+      document.getElementById("result").innerHTML = "<p>Your auto-graded score: " + totalScore + " out of " + maxScore + ".</p><p>Note: Sections 3, 4, 5, 7, and parts of Sections 6 and 8 require manual grading.</p>";
+    }
+  </script>
+</body>
+</html>
